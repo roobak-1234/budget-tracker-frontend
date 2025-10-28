@@ -1,0 +1,72 @@
+/* Admin Dashboard Black Text Override */
+.admin-dashboard,
+.admin-dashboard *,
+.admin-dashboard *::before,
+.admin-dashboard *::after {
+  color: #000000 !important;
+}
+
+/* Specific text elements */
+.admin-dashboard h1,
+.admin-dashboard h2,
+.admin-dashboard h3,
+.admin-dashboard h4,
+.admin-dashboard h5,
+.admin-dashboard h6,
+.admin-dashboard p,
+.admin-dashboard span,
+.admin-dashboard div,
+.admin-dashboard td,
+.admin-dashboard th,
+.admin-dashboard label,
+.admin-dashboard input,
+.admin-dashboard textarea,
+.admin-dashboard select {
+  color: #000000 !important;
+}
+
+/* Override Tailwind text colors */
+.admin-dashboard .text-gray-500,
+.admin-dashboard .text-gray-600,
+.admin-dashboard .text-gray-700,
+.admin-dashboard .text-gray-800,
+.admin-dashboard .text-gray-900,
+.admin-dashboard .text-blue-600,
+.admin-dashboard .text-blue-700,
+.admin-dashboard .text-blue-800,
+.admin-dashboard .text-blue-900,
+.admin-dashboard .text-green-600,
+.admin-dashboard .text-green-700,
+.admin-dashboard .text-green-800,
+.admin-dashboard .text-green-900,
+.admin-dashboard .text-red-600,
+.admin-dashboard .text-red-700,
+.admin-dashboard .text-red-800,
+.admin-dashboard .text-red-900,
+.admin-dashboard .text-yellow-600,
+.admin-dashboard .text-yellow-700,
+.admin-dashboard .text-yellow-800,
+.admin-dashboard .text-yellow-900,
+.admin-dashboard .text-purple-600,
+.admin-dashboard .text-purple-700,
+.admin-dashboard .text-purple-800,
+.admin-dashboard .text-purple-900,
+.admin-dashboard .text-orange-600,
+.admin-dashboard .text-orange-700,
+.admin-dashboard .text-orange-800,
+.admin-dashboard .text-orange-900 {
+  color: #000000 !important;
+}
+
+/* Keep button text white for readability */
+.admin-dashboard button {
+  color: #ffffff !important;
+}
+
+/* Keep specific colored elements for status indicators */
+.admin-dashboard .bg-green-100,
+.admin-dashboard .bg-red-100,
+.admin-dashboard .bg-yellow-100,
+.admin-dashboard .bg-blue-100 {
+  color: #000000 !important;
+}

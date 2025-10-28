@@ -1,0 +1,13 @@
+.magnetic-element {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+
+.magnetic-child {
+  display: inline-block;
+  will-change: transform;
+  transform-origin: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}

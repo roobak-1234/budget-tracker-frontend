@@ -1,0 +1,108 @@
+.expense-tracker-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.animated-text {
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+}
+
+.text-stroke,
+.text-fill {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  letter-spacing: 2px;
+}
+
+.text-stroke {
+  fill: none;
+  stroke: #0078FF;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawStroke 3.5s ease-out forwards,
+             eraseStroke 1s ease-in 5s forwards;
+}
+
+.text-fill {
+  fill: transparent;
+  animation: fillText 0.2s ease-out 3.5s forwards,
+             zoomText 0.5s ease-out 3.7s forwards,
+             fadeOut 0.5s ease-in 5s forwards;
+}
+
+@keyframes drawStroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fillText {
+  to {
+    fill: #0078FF;
+  }
+}
+
+@keyframes zoomText {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    fill: transparent;
+    transform: scale(1);
+  }
+}
+
+@keyframes eraseStroke {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .text-stroke,
+  .text-fill {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-stroke,
+  .text-fill {
+    font-size: 24px;
+  }
+}
+
+/* Infinite loop */
+.animated-text {
+  animation: restartLoop 6s infinite;
+}
+
+@keyframes restartLoop {
+  0%, 100% {
+    opacity: 1;
+  }
+}
