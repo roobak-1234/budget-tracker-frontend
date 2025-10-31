@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8080/api/expenses';
+const API_URL = process.env.REACT_APP_API_BASE_URL ? `${process.env.REACT_APP_API_BASE_URL}/expenses` : 'http://localhost:8080/api/expenses';
 
 const createAuthenticatedApi = () => {
   const token = localStorage.getItem('token');
